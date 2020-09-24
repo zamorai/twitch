@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import Hero from '../Hero';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchStreams } from '../../actions';
 import '../../styles/streamList.css';
 
@@ -10,6 +11,17 @@ function StreamList(props) {
     props.fetchStreams();
 
   }, []);
+
+  const renderAdmin = (stream) => {
+    if(stream.userId === props.auth.userId) {
+      return (
+        <div className = "streamList-buttons">
+        <button className="uk-button uk-button-default">Edit</button>
+        <button className="uk-button uk-button-primary">Delete</button>
+        </div>
+      )
+    }
+  }
 
   const renderedItems = props.streams.map(stream => {
    return (
@@ -23,14 +35,21 @@ function StreamList(props) {
           {stream.description}
         </p>  
       </div>
-      <button className="uk-button uk-button-default">Default</button>
-      <button className="uk-button uk-button-primary">Primary</button>
+      {renderAdmin(stream)} 
     </div>
-    <hr/>
+    <hr className = "streamList-divider"/>
     </React.Fragment>
     
    ) 
   });
+
+  const renderCreate = () => {
+    if(props.auth.isSignedIn) {
+      return (
+       <Link class="uk-width-1-6@xl uk-width-1-4@m uk-width-1-2 uk-margin-top uk-align-center uk-button uk-button-secondary" to = "/streams/new" >Create Stream</Link>
+      ) 
+    }
+  }
 
   return (
     <div>
@@ -39,13 +58,15 @@ function StreamList(props) {
       <div className = "streamList-container">
        {renderedItems}
       </div>
+      {renderCreate()} 
     </div>
   )
 }
 
 const mapStateToProps = (state) => {
   return {
-    streams: Object.values(state.streams)
+    streams: Object.values(state.streams),
+    auth: state.auth
   }
 }
 
