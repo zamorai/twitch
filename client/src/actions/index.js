@@ -1,4 +1,5 @@
 import axios from 'axios';
+import history from '../history';
 
 export const signIn = (userId) => {
   return {
@@ -22,7 +23,7 @@ export const createStream = (formValues) => {
       payload: response.data
     });
     //Do some programatic navigation to get user back to root route
-    
+    history.push('/');
   }
 }
 

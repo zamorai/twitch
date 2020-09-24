@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { Router, Redirect, Route, Switch } from 'react-router-dom';
+import history from '../history';
 import '../../node_modules/uikit/dist/css/uikit.min.css';
 import '../../node_modules/uikit/dist/js/uikit';
 import Header from './Header';
@@ -14,14 +15,14 @@ const App = () => {
 
   return (
     <div>
-      <Router>
+      <Router history = {history}> 
           <Header />
           <Switch>
             <Route path = "/" exact component = {StreamList} />
             <Route path = "/streams/new" exact component = {StreamCreate} />
-            <Route path = "/streams/edit" exact component = {StreamEdit} />
-            <Route path = "/streams/delete" exact component = {StreamDelete} />
-            <Route path = "/streams/show" exact component = {StreamShow} />
+            <Route path = "/streams/edit/:id" exact component = {StreamEdit} />
+            <Route path = "/streams/delete/:id" exact component = {StreamDelete} />
+            <Route path = "/streams/show/:id" exact component = {StreamShow} />
             <Route path = "/404" exact component = {NotFound} />
           <Redirect to = '/404' />
           </Switch>

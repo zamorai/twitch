@@ -16,8 +16,8 @@ function StreamList(props) {
     if(stream.userId === props.auth.userId) {
       return (
         <div className = "streamList-buttons">
-        <button className="uk-button uk-button-default">Edit</button>
-        <button className="uk-button uk-button-primary">Delete</button>
+        <Link to ={`/streams/edit/${stream.id}`} className="uk-button uk-button-default">Edit</Link>
+        <Link className="uk-button uk-button-primary">Delete</Link>
         </div>
       )
     }
@@ -46,7 +46,7 @@ function StreamList(props) {
   const renderCreate = () => {
     if(props.auth.isSignedIn) {
       return (
-       <Link class="uk-width-1-6@xl uk-width-1-4@m uk-width-1-2 uk-margin-top uk-align-center uk-button uk-button-secondary" to = "/streams/new" >Create Stream</Link>
+       <Link className="uk-width-1-6@xl uk-width-1-4@m uk-width-1-2 uk-margin-top uk-align-center uk-button uk-button-secondary" to = "/streams/new" >Create Stream</Link>
       ) 
     }
   }

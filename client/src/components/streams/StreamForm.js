@@ -1,9 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import '../../styles/streamCreate.css';
-import { connect } from 'react-redux';
-import { createStream } from '../../actions';
-
 
 const renderInput = (formProps) => {
 
@@ -14,7 +11,7 @@ const renderInput = (formProps) => {
       )
     }
   }
-
+ 
     return (
       <div className = "uk-margin"> 
         <label className = "uk-form-label create-label" for="form-stacked-text">{formProps.label}</label>
@@ -28,13 +25,13 @@ const renderInput = (formProps) => {
 
 
 
-function StreamCreate(props) {
+function StreamForm(props) {
 
 
 
   const onSubmit = (formValues) => {
     if(formValues.title && formValues.description) {
-      props.createStream(formValues);
+      props.onSubmit(formValues);
       formValues.title = "";
       formValues.description = "";
     }
@@ -67,9 +64,9 @@ const validate = (formValues) => {
 }
 
 const formWrapped = reduxForm({
-  form: 'streamCreate',
+  form: 'streamForm',
   validate,
   enableReinitialize: true
-})(StreamCreate);
+})(StreamForm);
 
-export default connect(null, { createStream })(formWrapped);
+export default (formWrapped);

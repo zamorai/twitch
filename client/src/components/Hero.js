@@ -8,11 +8,11 @@ function Hero(props) {
  const renderButton = () => {
   if(props.auth.isSignedIn) {
     return (
-      <Link class="uk-width-1-6@xl uk-width-1-4@m uk-width-1-2 uk-align-center uk-button uk-button-secondary" to = "/streams/new" >Create Stream</Link>
+      <Link className="uk-width-1-6@xl uk-width-1-4@m uk-width-1-2 uk-align-center uk-button uk-button-secondary" to = "/streams/new" >Create Stream</Link>
     )
   } else {
       return (
-        <Link class="uk-width-1-6@xl uk-width-1-4@m uk-width-1-2 uk-align-center uk-button uk-button-secondary" to = "#" >Login to Create streams</Link>
+        <Link className="uk-width-1-6@xl uk-width-1-4@m uk-width-1-2 uk-align-center uk-button uk-button-secondary" to = "#" >Login to Create streams</Link>
       )
   }
 
