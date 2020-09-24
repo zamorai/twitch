@@ -1,0 +1,14 @@
+{
+  "streams": [
+    {
+      "title": "Enter a title",
+      "description": "This is a description",
+      "id": 1
+    },
+    {
+      "title": "This is a test Stream",
+      "description": "There must be no idea of who wants to delete a stream",
+      "id": 2
+    }
+  ]
+}

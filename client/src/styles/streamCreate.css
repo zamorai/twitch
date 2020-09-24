@@ -1,0 +1,25 @@
+.streamCreate-container {
+  height: 107.4vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -7.4rem;
+  background-image: url('../img/new.jpg');
+}
+
+.create-form{
+  transform: translateY(250px);
+}
+
+.create-label {
+  color: white;
+}
+
+.streamCreate-header{
+  color: white;
+  text-align: center;
+  transform: translateY(200px);
+}
+
+.streamCreate-error {
+  color: rgb(212, 21, 21); 
+}

@@ -1,0 +1,17 @@
+.logout-auth {
+  padding: 0.2rem 2rem;
+  margin-right: 7%;
+  border: none;
+  font-size: 0.6rem;
+  color: black;
+  border-radius: 0.7rem;
+  background-color: white;
+  transition: all 0.2s;
+} 
+
+.logout-auth:hover, .logout-auth:focus {
+  color: rgb(186, 0, 253);
+  border: none;
+  text-decoration: none;
+}
+ 

@@ -1,0 +1,33 @@
+.header-container{ 
+  height: 3rem;
+  background-color: transparent; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 200; 
+}
+
+.logo-header{
+  height: 2rem;
+}
+
+.logo-link {
+  margin-left: 4%;
+}
+
+.stream-header {
+  color: white;
+
+  transform: translateX(21px);
+  transition: all 0.2s;
+} 
+
+.stream-header:hover {
+  color: rgb(186, 0, 253);
+  text-decoration: none;
+}
+
+.hh{
+  background-color: teal; 
+}
+ 

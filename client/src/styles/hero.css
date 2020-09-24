@@ -1,0 +1,25 @@
+.streamlist-container {
+  background-image: url('../img/bg.png');
+  background-size: cover;
+  width: 100vw;
+  background-position: bottom;
+  height: 100vh;
+  margin-top: -3rem;
+ 
+}
+
+.streamlist-items {
+  text-align: center;
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  height: 70%;
+  width: 60%; 
+  margin: auto;  
+}
+
+.text {
+  color: white; 
+}

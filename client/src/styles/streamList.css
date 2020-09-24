@@ -1,0 +1,26 @@
+.streamList-container {
+  background-color: rgb(250, 250, 250);
+}
+
+.streamList-items{
+  display: flex;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -1rem;
+}
+
+.streamList-items-container{
+  flex: 1;
+  margin-top: 1rem;
+}
+
+.streamList-title{
+  font-size: 2rem;
+}
+
+.streamList-heading{
+  display: flex;
+  justify-content: center;
+}
