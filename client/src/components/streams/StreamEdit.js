@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import _ from 'lodash';
 import { connect } from 'react-redux';
-import { fetchStream } from '../../actions';
+import { fetchStream, editStream } from '../../actions';
+import StreamForm from './StreamForm';
 
 
 function StreamEdit(props) {
@@ -12,10 +14,15 @@ function StreamEdit(props) {
 
   }, []);
 
-  const renderItems = props.stream ? <div>{props.stream.title}</div> : <div>Loading...</div>
+ const onSubmit = (formValues) => {
+    props.editStream(props.match.params.id, formValues)
+  }
 
   return (
-   <div>{renderItems}</div>
+    <div className="streamCreate-container">
+    <h1 className="uk-heading-large streamCreate-header">Edit a Stream</h1>
+    <StreamForm onSubmit = {onSubmit} initialValues = {_.pick(props.stream, "title", 'description')}/> 
+  </div>
   )
 }
 
@@ -26,4 +33,4 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, { fetchStream })(StreamEdit);
+export default connect(mapStateToProps, { fetchStream, editStream })(StreamEdit);

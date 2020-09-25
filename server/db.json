@@ -11,52 +11,20 @@
       "id": 2
     },
     {
-      "title": "This is the best Apex legends stream",
+      "title": "This is the best Apex legends ",
       "description": "Watch Aculite wrek in PUBG",
-      "userId": "101402168306568093133",
       "id": 3
     },
     {
+      "title": "test1",
       "description": "test",
-      "title": "test",
-      "userId": "101402168306568093133",
       "id": 4
-    },
-    {
-      "title": "I didnt expect that ",
-      "description": "That was suspicious",
-      "userId": "101402168306568093133",
-      "id": 5
-    },
-    {
-      "title": "New Stream",
-      "description": "Title stream",
-      "userId": "101402168306568093133",
-      "id": 6
-    },
-    {
-      "title": "dddddff",
-      "description": "asdf",
-      "userId": "101402168306568093133",
-      "id": 7
-    },
-    {
-      "title": "dddddff",
-      "description": "asdf",
-      "userId": "101402168306568093133",
-      "id": 8
     },
     {
       "title": "logged out",
       "description": "signed out",
       "userId": null,
       "id": 9
-    },
-    {
-      "title": "asdfa",
-      "description": "sdf",
-      "userId": "101402168306568093133",
-      "id": 10
     }
   ]
 }

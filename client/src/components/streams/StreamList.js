@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import Hero from '../Hero';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchStreams } from '../../actions';
+import { fetchStreams, deleteStream } from '../../actions';
 import '../../styles/streamList.css';
 
 function StreamList(props) {
@@ -17,7 +17,7 @@ function StreamList(props) {
       return (
         <div className = "streamList-buttons">
         <Link to ={`/streams/edit/${stream.id}`} className="uk-button uk-button-default">Edit</Link>
-        <Link className="uk-button uk-button-primary">Delete</Link>
+        <button onClick = {() => props.deleteStream(stream.id)} className="uk-button uk-button-primary">Delete</button>
         </div>
       )
     }
@@ -70,4 +70,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {fetchStreams})(StreamList)
+export default connect(mapStateToProps, {fetchStreams, deleteStream})(StreamList)

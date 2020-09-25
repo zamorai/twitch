@@ -32,15 +32,14 @@ function StreamForm(props) {
   const onSubmit = (formValues) => {
     if(formValues.title && formValues.description) {
       props.onSubmit(formValues);
-      formValues.title = "";
-      formValues.description = "";
+      // formValues.title = "";
+      // formValues.description = "";
     }
     
   }
 
   return (
-    <div className="streamCreate-container">
-      <h1 className="uk-heading-large streamCreate-header">Create a Stream</h1>
+    <div>
       <form className="uk-form-stacked uk-container uk-container-xsmall create-form" onSubmit = {props.handleSubmit(onSubmit)}>
         <Field placeholder="Title of stream" label = "Enter Title" name ="title" component = {renderInput}/>
         <Field placeholder="Description of stream" label = "Enter Description" name ="description" component = {renderInput} />
