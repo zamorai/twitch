@@ -29,7 +29,7 @@ function StreamList(props) {
     <div className = "streamList-items" key = {stream.id}>
       <div className = "streamList-items-container">
         <h1 className = "streamList-title">
-          {stream.title}
+          <Link to = {`/streams/${stream.id}`} >{stream.title}</Link>
         </h1>
         <p className = "streamList-description">
           {stream.description}

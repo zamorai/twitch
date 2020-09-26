@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/googleAuth.css' 
 import { connect } from 'react-redux';
 import { signIn, signOut } from '../actions';
+import history from '../history';
 
 class GoogleAuth extends React.Component {
 
@@ -35,6 +36,7 @@ class GoogleAuth extends React.Component {
 
   onSignOut = () => {
     this.auth.signOut();
+    history.push('/');
   }
 
   renderButton = () => {

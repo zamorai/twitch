@@ -19,12 +19,6 @@
       "title": "test1",
       "description": "test",
       "id": 4
-    },
-    {
-      "title": "logged out",
-      "description": "signed out",
-      "userId": null,
-      "id": 9
     }
   ]
 }
